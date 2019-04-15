@@ -53,6 +53,7 @@ public class StudentServiceImpl implements IStudentService {
         }
     }
 
+    //将"1，2，3，4..."转换成list
     private List<Integer> stringToList(String idList){
         List<Integer> list = new ArrayList<>();
         for (String str: idList.split(",")){
@@ -61,7 +62,6 @@ public class StudentServiceImpl implements IStudentService {
         return list;
     }
 
-    //将"1，2，3，4..."转换成list
     public ServerResponse<PageVo> fetchStudent(int page, int pageSize){
         //startPage--start
         //填充自己的sql查询逻辑
